@@ -9,8 +9,8 @@ makeCacheMatrix <- function( m = matrix() ) {
 
     ## Method to set the matrix
     set <- function( matrix ) {
+            i <<- null
             m <<- matrix
-            i <<- NULL
     }
 
     ## Method the get the matrix
