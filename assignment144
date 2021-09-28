@@ -1,36 +1,12 @@
-## A pair of functions that cache the inverse of a matrix
+(define n 100)
 
+(define (clam)
+   (printf "in clam, n = ~a \n" n))
 
-## Creates a special matrix object that can cache its inverse
-makeCacheMatrix <- function( m = matrix() ) {
+(define (squid n)
+   (printf "in squid, n = ~a \n" n)
+   (clam))
 
-	## Initialize the inverse property
-    i <- NULL
-
-    ## Method to set the matrix
-    set <- function( matrix ) {
-            i <<- null
-            m <<- matrix
-    }
-
-    ## Method the get the matrix
-    get <- function() {
-    	## Return the matrix
-    	m
-    }
- ## Method to set the inverse of the matrix
-    setInverse <- function(inverse) {
-        i <<- inverse
-    }
-
-    ## Method to get the inverse of the matrix
-    getInverse <- function() {
-        ## Return the inverse property
-        i
-    }
-
-    ## Return a list of the methods
-    list(set = set, get = get,
-         setInverse = setInverse,
-         getInverse = getInverse)
-}
+(printf "in main program, n = ~a \n" n)
+(squid 1)
+(clam)
